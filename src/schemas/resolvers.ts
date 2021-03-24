@@ -1,7 +1,7 @@
 const books = [
   {
-    title: "The Awakening",
-    author: "Kate Chopin",
+    title: "입 속의 검은 잎",
+    author: "기형도",
   },
   {
     title: "City of Glass",
