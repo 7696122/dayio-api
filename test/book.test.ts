@@ -1,4 +1,4 @@
-import { query, mutate } from "./testserver";
+import { query, mutate } from "../src/testserver";
 import gql from "graphql-tag";
 
 it("books", async () => {
