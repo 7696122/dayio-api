@@ -1,4 +1,5 @@
 const express = require("express");
+const { altairExpress } = require("altair-express-middleware");
 const { ApolloServer, gql } = require("apollo-server-express");
 
 // A schema is a collection of type definitions (hence "typeDefs")
@@ -59,3 +60,10 @@ app.listen(port, () => {
     `🚀  Server ready at http://localhost:${port}${server.graphqlPath}`
   );
 });
+
+app.use(
+  "/altair",
+  altairExpress({
+    endpointURL: server.graphqlPath,
+  })
+);
