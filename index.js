@@ -1,4 +1,5 @@
-const { ApolloServer, gql } = require("apollo-server");
+const express = require("express");
+const { ApolloServer, gql } = require("apollo-server-express");
 
 // A schema is a collection of type definitions (hence "typeDefs")
 // that together define the "shape" of queries that are executed against
@@ -48,7 +49,13 @@ const server = new ApolloServer({
   playground: true,
 });
 
+const port = process.env.PORT || 4000;
+const app = express();
+server.applyMiddleware({ app });
+
 // The `listen` method launches a web server.
-server.listen({ port: process.env.PORT || 3000 }).then(({ url }) => {
-  console.log(`🚀  Server ready at ${url}`);
+app.listen(port, () => {
+  console.log(
+    `🚀  Server ready at http://localhost:${port}${server.graphqlPath}`
+  );
 });
