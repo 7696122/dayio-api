@@ -1,11 +1,9 @@
 import { ApolloServer, gql } from "apollo-server";
 import { createTestClient } from "apollo-server-testing";
-import typeDefs from "./schemas/typeDefs";
-import resolvers from "./schemas/resolvers";
+import schema from "./schemas/schema";
 
 const server = new ApolloServer({
-  typeDefs,
-  resolvers,
+  schema,
 });
 
 const { query, mutate } = createTestClient(server);

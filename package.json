@@ -21,8 +21,8 @@
   },
   "scripts": {
     "test": "jest",
-    "dev": "nodemon src/server.ts --exec ts-node src/server.ts -e ts,graphql",
-    "start": "node dist/server.js",
+    "dev": "nodemon src/main.ts --exec ts-node src/main.ts -e ts,graphql",
+    "start": "node dist/main.js",
     "build": "tsc --build",
     "clean": "tsc --build --clean"
   }

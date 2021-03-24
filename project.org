@@ -1,0 +1,4 @@
+#+TITLE: Project
+#+auto_tangle: nil
+
+[[https://github.com/bromix/typescript-jest-example][GitHub - bromix/typescript-jest-example]]

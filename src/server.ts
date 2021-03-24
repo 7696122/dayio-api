@@ -1,5 +1,3 @@
-import express from "express";
-import { altairExpress } from "altair-express-middleware";
 import { ApolloServer } from "apollo-server-express";
 import schema from "./schemas/schema";
 
@@ -11,20 +9,4 @@ const server = new ApolloServer({
   introspection: true,
 });
 
-const port = process.env.PORT || 4000;
-const app = express();
-server.applyMiddleware({ app });
-
-// The `listen` method launches a web server.
-app.listen(port, () => {
-  console.log(
-    `🚀  Server ready at http://localhost:${port}${server.graphqlPath}`
-  );
-});
-
-app.use(
-  "/altair",
-  altairExpress({
-    endpointURL: server.graphqlPath,
-  })
-);
+export default server;
