@@ -5,10 +5,13 @@
     "altair-express-middleware": "^3.2.2",
     "apollo-server": "^2.21.1",
     "apollo-server-express": "^2.21.2",
+    "class-validator": "^0.13.1",
     "dotenv": "^8.2.0",
     "graphql": "^15.5.0",
     "graphql-tag": "^2.11.0",
-    "graphql-tools": "^7.0.4"
+    "graphql-tools": "^7.0.4",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.1"
   },
   "devDependencies": {
     "@types/jest": "^26.0.21",
